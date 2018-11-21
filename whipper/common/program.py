@@ -168,9 +168,6 @@ class Program:
 
         return self.result
 
-    def saveRipResult(self):
-        self._presult.persist()
-
     @staticmethod
     def addDisambiguation(template_part, metadata):
         """Add disambiguation to template path part string."""
