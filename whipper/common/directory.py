@@ -29,16 +29,6 @@ def config_path():
     return join(path, 'whipper.conf')
 
 
-# FIXME: maybe the cache_path should be dropped
-def cache_path(name=None):
-    path = join(getenv('XDG_CACHE_HOME') or join(expanduser('~'), '.cache'),
-                'whipper')
-    if name:
-        path = join(path, name)
-    makedirs(path, exist_ok=True)
-    return path
-
-
 def data_path(name=None):
     path = join(getenv('XDG_DATA_HOME') or
                 join(expanduser('~'), '.local/share'),
