@@ -499,8 +499,6 @@ Log files will log the path to tracks relative to this directory.
                 self.itable.setFile(number, 1, trackResult.filename,
                                     self.itable.getTrackLength(number), number)
 
-            self.program.saveRipResult()
-
         # check for hidden track one audio
         htoa = self.program.getHTOA()
         if htoa:
@@ -540,8 +538,6 @@ Log files will log the path to tracks relative to this directory.
             logger.warning('AccurateRip entry not found')
 
         accurip.print_report(self.program.result)
-
-        self.program.saveRipResult()
 
         self.program.writeLog(discName, self.logger)
 
