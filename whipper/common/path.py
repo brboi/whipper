@@ -54,4 +54,9 @@ class PathFilter:
             path = re.sub(r'\s', R_CH, path)
         if self._printable:
             path = re.sub(r'[^\x20-\x7E]', R_CH, path)
+        
+        # filter quotes and comma
+        path = re.sub(r"'", R_CH, path)
+        path = re.sub(r'"', R_CH, path)
+        path = re.sub(r',', R_CH, path)
         return path
